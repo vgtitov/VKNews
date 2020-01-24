@@ -4,6 +4,10 @@
 
 ## User settings
 xcuserdata/
+*.xcuserstate
+project.xcworkspace/
+*.DS_Store
+._*
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -63,8 +67,7 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
-
-Carthage/Build/
+# Carthage/Build/
 
 # Accio dependency management
 Dependencies/
