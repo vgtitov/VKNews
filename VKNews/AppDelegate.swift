@@ -10,13 +10,31 @@ import UIKit
 import VKSdkFramework
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, AuthServiceDelegate {
+    
     var window: UIWindow?
-
+    
+    var authSevice: AuthService!
+    
+    static func shared() -> AppDelegate{
+        return UIApplication.shared.delegate as! AppDelegate
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow()
+        self.authSevice = AuthService()
+        authSevice.delegate = self
+        let authVC: AuthViewController = AuthViewController.loadFromStoryboard()
+        
+        window?.rootViewController = authVC
+        window?.makeKeyAndVisible()
+        
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        VKSdk.processOpen(url, fromApplication: UIApplication.OpenURLOptionsKey.sourceApplication.rawValue)
         return true
     }
 
@@ -40,6 +58,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK: AuthServiceDelegate
+    
+    func authServiceShuldShow(_ viewController: UIViewController) {
+        print(#function)
+        window?.rootViewController?.present(viewController,animated: true,completion: nil)
+    }
+    
+    func authServiceSingIn() {
+        print(#function)
+        let feedVC:FeedViewController = FeedViewController.loadFromStoryboard()
+        
+        let navVC = UINavigationController(rootViewController: feedVC)
+        window?.rootViewController = navVC
+    }
+    
+    func authServiceDidSingInFail() {
+        print(#function)
     }
 
 
