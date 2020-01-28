@@ -17,7 +17,6 @@
 		0BECE2CF23D9D7F900074E51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BECE2CE23D9D7F900074E51 /* AppDelegate.swift */; };
 		0BECE2D623D9D7FC00074E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BECE2D523D9D7FC00074E51 /* Assets.xcassets */; };
 		0BECE2D923D9D7FC00074E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BECE2D723D9D7FC00074E51 /* LaunchScreen.storyboard */; };
-		0BECE2E123D9D90000074E51 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0BECE2E023D9D90000074E51 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		0BECE2D523D9D7FC00074E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BECE2D823D9D7FC00074E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BECE2DA23D9D7FC00074E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BECE2E023D9D90000074E51 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +107,6 @@
 				0BECE2D523D9D7FC00074E51 /* Assets.xcassets */,
 				0BECE2D723D9D7FC00074E51 /* LaunchScreen.storyboard */,
 				0BECE2DA23D9D7FC00074E51 /* Info.plist */,
-				0BECE2E023D9D90000074E51 /* .gitignore */,
 				0BAAEE3A23DEE6A6003CCA80 /* Helpers */,
 			);
 			path = VKNews;
@@ -174,7 +171,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BECE2E123D9D90000074E51 /* .gitignore in Resources */,
 				0BAAEE3223DECC83003CCA80 /* AuthViewController.storyboard in Resources */,
 				0BECE2D923D9D7FC00074E51 /* LaunchScreen.storyboard in Resources */,
 				0BAAEE3723DEE309003CCA80 /* FeedViewController.storyboard in Resources */,
