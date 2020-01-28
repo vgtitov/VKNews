@@ -6,7 +6,8 @@
 xcuserdata/
 *.xcuserstate
 project.xcworkspace/
-*.DS_Store
+*DS_Store
+Carthage/Build/.DS_Store
 ._*
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
